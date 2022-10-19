@@ -1,13 +1,13 @@
-import { useState } from "react";
-
 type Props = {
-    value: number;
+    value: string;
 }
 
 export const Display = ({ value }: Props) => {
     return (
         <div>
-            <input value={value} />
+            <div>
+                {value}
+            </div>
         </div>
 
     )

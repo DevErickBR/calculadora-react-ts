@@ -1,17 +1,13 @@
-import React, { useState } from "react";
+import Arrow from '../../assets/right-arrow.png'
+import { removeNumber } from '../../helpers/RemoveOneNumber'
+import { handleDeleteValue } from '../../helpers/DeleteValue'
 type Props = {
     setValue: (e: string) => void;
+    setValor: (e: string) => void;
+    valor: string;
 }
 
-export const KeyBoard = ({ setValue }: Props) => {
-    // const [value, setValue] = useState<string>("0")
-    // const handleClick = (e: string) => {
-    //     if (value == "0") {
-    //         return setValue(e)
-    //     } else {
-    //         return setValue(value + e)
-    //     }
-    // }
+export const KeyBoard = ({ setValue, valor, setValor }: Props) => {
 
     return (
         <div>
@@ -26,6 +22,8 @@ export const KeyBoard = ({ setValue }: Props) => {
             <button onClick={() => setValue("1")}>1</button>
             <button onClick={() => setValue("0")}>0</button>
             <button onClick={() => setValue(",")}>,</button>
+            <button onClick={() => removeNumber(valor, setValor)}><img src={Arrow} width="10px"></img></button>
+            <button onClick={() => handleDeleteValue(valor, setValor)}>AC</button>
         </div>
     );
 };
