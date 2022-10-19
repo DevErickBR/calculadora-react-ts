@@ -14,12 +14,6 @@ function App() {
     }
   }
 
-  const handleDeleteValue = () => {
-    if (currentValue) {
-      return setCurrentValue("0")
-    }
-  }
-
   const handleSetValue = (e: string) => {
     setCurrentValue(e)
   };
