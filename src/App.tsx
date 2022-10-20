@@ -3,9 +3,8 @@ import { Display } from "./components/Display";
 import { KeyBoard } from "./components/KeyBoard";
 
 function App() {
-  // const [firstValue, setFirstValue] = useState<number>(0);
-  // const [secondValue, setSencondValue] = useState<number>(0);
   const [currentValue, setCurrentValue] = useState<string>("0");
+  const [result, setResult] = useState<number>(0)
   const handleSetCurrentValue = (e: string) => {
     if (currentValue == "0") {
       return setCurrentValue(e)
@@ -21,10 +20,10 @@ function App() {
   return (
     <div>
       <div>
-        <Display value={currentValue} />
+        <Display value={currentValue} result={result} />
       </div>
       <div>
-        <KeyBoard setValue={handleSetCurrentValue} valor={currentValue} setValor={handleSetValue} />
+        <KeyBoard setValue={handleSetCurrentValue} valor={currentValue} setValor={handleSetValue} result={result} />
       </div>
     </div>
   );
