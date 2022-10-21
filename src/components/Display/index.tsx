@@ -1,18 +1,18 @@
 type Props = {
     value: string;
-    result: number;
+    resultx: number;
 }
 
-export const Display = ({ value, result }: Props) => {
+export const Display = ({ value, resultx }: Props) => {
     return (
         <div>
             <div>
                 {value}
             </div>
             <div>
-                = {result}
+                {resultx}
             </div>
         </div>
+    );
 
-    )
 };

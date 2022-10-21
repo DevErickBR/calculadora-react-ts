@@ -13,18 +13,15 @@ function App() {
     }
   }
 
-  const handleSetValue = (e: string) => {
-    setCurrentValue(e)
-  };
-
   return (
     <div>
       <div>
-        <Display value={currentValue} result={result} />
+        <Display value={currentValue} resultx={result} />
       </div>
       <div>
-        <KeyBoard setValue={handleSetCurrentValue} valor={currentValue} setValor={handleSetValue} result={result} />
+        <KeyBoard setValue={handleSetCurrentValue} valor={currentValue} setValor={setCurrentValue} result={setResult} />
       </div>
+      <div>{result}</div>
     </div>
   );
 };
