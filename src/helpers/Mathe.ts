@@ -11,6 +11,6 @@ export const Add = (arr: number[], e: string, f: (a: string) => void, r: number)
     for (let i = 0; i < arr.length; i++) {
         r = arr[i] + arr[i - 1];
         console.log(r)
-        return r .
+        return r
     }
 };
